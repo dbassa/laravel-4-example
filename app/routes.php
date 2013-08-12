@@ -16,8 +16,10 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::controller('restful','Restful');
-
-Route::controller('authors','Authors');
-
-Route::get('action','Action@index');
+Route::get('authors',array('as'=>'authors','uses'=>'Authors@index'));
+Route::get('author/{id}', array('as'=>'author','uses'=>'Authors@view'));
+Route::get('authors/newAuthor', array('as'=>'newAuthor','uses'=>'Authors@newAuthor'));
+Route::post('authors/create',array('uses'=>'Authors@create'));
+Route::get('authors/{id}',array('as'=>'edit','uses'=>'Authors@edit'));
+Route::put('author/update',array('uses'=>'Authors@update'));
+Route::delete('author/delete',array('uses'=>'Authors@delete'));

@@ -6,6 +6,10 @@
 			<link rel="stylesheet" href="">
 	</head>
 	<body>
+		@if (Session::has('message'))
+			<p style="color: green;">{{ Session::get('message') }}</p>
+		@endif
+
 		@yield('content')
 	</body>
 </html>

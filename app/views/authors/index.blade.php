@@ -3,12 +3,13 @@
 @section('content')
 	<h1>Authors Page</h1>
 
-	@if (isset($name))
-		{{ $name }}<br />
-	@else 
-		No name<br />
-	@endif
+	<ul>
+	@foreach($authors as $author)
+		<li>{{ HTML::linkRoute('author',
+								$author->name,
+								array($author->id)) }}</li>
+	@endforeach
+	</ul>
 
-	{{ $edat }}<br />
-	{{ $poblacio }}<br />
+	<p>{{ HTML::linkRoute('newAuthor','New Author') }}</p>
 @stop
