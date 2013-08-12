@@ -1,0 +1,27 @@
+Creem la taula migrations
+
+	Un cop dins el nostre workspace de laravel:
+
+	php artisan migrate:install
+
+
+Creem la migracio:
+
+	1.- php artisan migrate:make create_authors_table
+	2.- Editem el fitxer creat a app/database/migrations per dissenyar la bd usem Schema class
+	3.- php artisan migrate
+
+	1.- php artisan migrate:make add_authors
+	2.- Per afegir dades usem DB class
+	3.- php artisan migrate
+
+
+Per desfer la migracio més recent:
+
+	php artisan migrate:rollback
+
+	Nota: cada vegada que executem això irà desfent les migracions que hem fet en el ordre que les hàgim aplicat.
+
+Per desfer-les totes de cop:
+
+	php artisan migrate:reset

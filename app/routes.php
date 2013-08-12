@@ -15,3 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::controller('restful','Restful');
+
+Route::controller('authors','Authors');
+
+Route::get('action','Action@index');
