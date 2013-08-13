@@ -6,7 +6,7 @@ WHAT WE ARE GOING TO DO:
 2.- Go into laravel folder
 3.- Download and Install composer, which is necessary to install laravel
 4.- Create an empty database to work with
-5.- Use the laravel command line artisan to create a very simple database with some records
+5.- Use the laravel command line artisan to create a tables with some records
 6.- Open the app in your browser.
 
 
